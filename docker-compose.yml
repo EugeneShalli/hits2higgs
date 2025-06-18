@@ -1,0 +1,11 @@
+version: "6"
+
+services:
+  dihiggs_app_6:
+    build: .
+    container_name: dihiggs_jupyter_v6
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
